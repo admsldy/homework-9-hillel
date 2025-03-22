@@ -1,0 +1,49 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    background-color: #f9f9f9;
+    color: #727272;
+    line-height: 1.64;
+}
+
+.container {
+    padding: 0 calc(50vw - 555px);
+}
+
+.header {
+    background-color: #EEEFF1;
+    padding-top: 79px;
+    padding-bottom: 20px;
+    
+}
+
+.header__menu {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.header__link {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.header__link:hover,
+.header__link:focus {
+    text-decoration: underline;
+    
+}
+.header__link.header__link--active {
+    color: #34547A;
+    font-weight: 500;
+}
+
+
