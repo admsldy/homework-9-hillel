@@ -2,8 +2,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
+    font-variation-settings: "wdth" 100;
     background-color: #f9f9f9;
     color: #727272;
     line-height: 1.64;
@@ -17,7 +16,8 @@ body {
     background-color: #EEEFF1;
     padding-top: 79px;
     padding-bottom: 20px;
-    
+    display: block;
+    max-width: 100%;
 }
 
 .header__menu {
@@ -38,8 +38,8 @@ body {
 .header__link:hover,
 .header__link:focus {
     text-decoration: underline;
-    
 }
+
 .header__link.header__link--active {
     color: #34547A;
     font-weight: 500;
@@ -144,7 +144,10 @@ body {
 .video {
     box-sizing: border-box;
     position: relative;
-    display: inline-block;
+}
+video, img, iframe {
+    display: block;
+    max-width: 100%;
 }
 
 .video:after {
@@ -201,3 +204,104 @@ body {
     font-size: 13px;
     margin: 0;
 }
+
+@media screen and (max-width: 1200px) {
+    .container {
+        padding-left: calc(50vw - 350px);
+        padding-right: calc(50vw - 350px);
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding-left: calc(50vw - 280px);
+        padding-right: calc(50vw - 280px);
+    }
+
+    .video__play {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+
+    .container {
+        padding-left: calc(50vw - 210px);
+        padding-right: calc(50vw - 210px);
+    }
+
+    .header__menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 60px;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .container {
+        padding-left: calc(50vw - 185px);
+        padding-right: calc(50vw - 185px);
+    }
+        .offer {
+            padding-top: 102px;
+            padding-bottom: 82px;
+        }
+    
+        .header__menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px 50px;
+        }
+    
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px 16px;
+        }
+    
+        .offer__title {
+            font-size: 35px;
+        }
+    
+        .section-title {
+            font-size: 28px;
+        }
+    
+        .button {
+            padding: 14px 35px;
+            font-size: 14px;
+        }
+    
+        .video__play {
+            width: 60px;
+        }
+    
+        .footer {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    
+        .footer__title {
+            font-size: 14px;
+        }
+    
+        .footer__copy {
+            font-size: 10px;
+        }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        padding-left: calc(50vw - 180px);
+        padding-right: calc(50vw - 180px);
+    }
+
+}
+
